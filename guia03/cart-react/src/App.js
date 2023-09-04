@@ -1,4 +1,5 @@
-
+//Esto debe ser algo como la raiz de todo
+//importando lo necesario
 import { useState } from 'react'; 
 import { Headers } from './components/Headers'; 
 import  Modals  from './components/Modals';

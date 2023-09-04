@@ -1,6 +1,7 @@
 import { useState } from 'react'; 
 export const Headers = (
-  
+    //Aqui vienen los datos de alguna parte, se esta destructurando una estructura 
+    //o  mas bien por qui se reciben los parametros
     { allProducts, setAllProducts, total, countProducts, setCountProducts, setTotal, }) => { 
 
         //Variable de estado
@@ -24,7 +25,9 @@ export const Headers = (
                 return ( 
                 <header> <h1>Tienda de Libros</h1> 
                 <div className='container-icon'>
-                
+                  {/* el estado se intercala, cuando el cuadro de dialago del carro es disable esta en false 
+                      si esta abirto es true
+                  */}
 
                   {/**Manipulacion de la variable de estado setActive */}
 
@@ -35,11 +38,11 @@ export const Headers = (
                 <div className='count-products'> <span id='contador-productos'>{countProducts}</span> </div> 
                 </div> 
                 
-               
+                {/*Es aqui donde se manipuela la propiedad css */}
                    <div className={`container-cart-products ${ active ? '' : 'hidden-cart' }`} > 
 
 
-                  
+                    {/**Esto es la ventana emergente */}
                     {allProducts.length ? ( 
                     
                     <>

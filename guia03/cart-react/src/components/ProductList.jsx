@@ -1,5 +1,5 @@
 import React from "react"; 
-
+//Aqui vienen los datos simula lo que es una base de datos 
 import {data} from "./data"; 
 
 
@@ -8,7 +8,7 @@ export const ProductList = (
     { allProducts, setAllProducts, countProducts, setCountProducts, total, setTotal, }) => 
 
     { 
-        
+        //Recibe el parametro products 
          const onAddProduct = product => 
     {
          if (allProducts.find(item => item.id === product.id)){
@@ -25,7 +25,7 @@ export const ProductList = (
      return (
 
         <div className='container-items'> {data.map(
-           
+            //Aqui se declara product 
             product => ( 
             <div className='item' key={product.id}>     
             <figure> 
@@ -33,7 +33,7 @@ export const ProductList = (
             </figure>
             <div className='info-product'>
             <h2>{product.nameProduct}</h2> <p className='price'>${product.price}</p>
-           
+            {/**Aqui se pasa como parametro a la funcion onAddProduct  */}
 
             <button onClick={() => onAddProduct(product)}> Añadir al carrito </button>
                 {/**() => onAddProduct(product) */}
